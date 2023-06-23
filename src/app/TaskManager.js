@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import 'fa-icons';
+import './style.css'
 function TaskManager() {
     const [tasks,setTasks] = useState([]);
     const [inputValue,setInputValue] = useState("");
@@ -13,7 +14,7 @@ function TaskManager() {
                 content:inputValue,
                 isComplete: false,
                 idEditing: false
-            }
+            } 
         ])
         setInputValue("")
     }   
@@ -91,7 +92,7 @@ function TaskManager() {
                                 <button onClick={
                                     () => saveTask(index)
                                 }>
-                                    <i class="fa-solid fa-check"></i>
+                                    <i className="fa-solid fa-check"></i>
                                 </button>
                             </span>
                         ) : (
@@ -116,8 +117,9 @@ function TaskManager() {
                                 () => deleteTask(index)
                             }
                             className="delete-btn">
-                            <i class="fa-solid fa-trash"></i>
+                            <fa-icon class="fa-solid fa-trash"></fa-icon>
                         </button>
+                        
                     </div>
                 </div>
             );
