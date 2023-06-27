@@ -16,9 +16,9 @@ function Home(){
 
     }
     const offerCalc=()=>{
-        offer1=(UserValue*10)/100;
-        offer2=(UserValue*20)/100;
-        offer3=(UserValue*25)/100;
+        offer1=UserValue-((UserValue*10)/100);
+        offer2=UserValue-((UserValue*20)/100);
+        offer3=UserValue-((UserValue*25)/100);
     }
     return <>
     <Row >
